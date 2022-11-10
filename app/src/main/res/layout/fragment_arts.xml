@@ -32,6 +32,7 @@
         app:layout_anchor="@id/artsRV"
         app:layout_anchorGravity="bottom|end"
         app:fabSize="normal"
-        android:layout_margin="16dp"/>
+        android:layout_margin="16dp"
+        android:focusable="true" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
