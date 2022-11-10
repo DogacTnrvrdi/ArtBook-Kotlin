@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">ArtBook</string>
+    <string name="search_image">Search Image</string>
+    <string name="click_me_image">Click Me</string>
+    <string name="shown_image">Shown Image</string>
+    <string name="fab">Floating Action Button</string>
+    <string name="enter_art_name">Enter Art Name</string>
+    <string name="enter_artist_name">Enter Artist Name</string>
+    <string name="enter_year">Enter Year</string>
+    <string name="save">Save</string>
+    <string name="art_name">Art Name</string>
+    <string name="artist_name">Artist Name</string>
+    <string name="year">Year</string>
 </resources>

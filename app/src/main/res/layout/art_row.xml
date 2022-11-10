@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -10,40 +9,41 @@
         android:id="@+id/artRowIV"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_background"
-        android:scaleType="centerCrop" />
+        android:contentDescription="@string/shown_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-         <TextView
-             android:id="@+id/artRowNameText"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="Art Name"
-             android:textSize="28sp"
-             android:layout_marginStart="15dp"
-             android:layout_marginBottom="5dp" />
+        <TextView
+            android:id="@+id/artRowNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/art_name"
+            android:textSize="28sp" />
 
         <TextView
             android:id="@+id/artRowArtistNameText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Artist Name"
-            android:textSize="20sp"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="5dp" />
+            android:layout_marginBottom="5dp"
+            android:text="@string/artist_name"
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/artRowYearTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Year"
-            android:textSize="18sp"
             android:layout_marginStart="15dp"
-            android:layout_marginBottom="5dp" />
+            android:layout_marginBottom="5dp"
+            android:text="@string/year"
+            android:textSize="18sp" />
 
     </LinearLayout>
 
