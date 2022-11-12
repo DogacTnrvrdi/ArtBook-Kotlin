@@ -10,7 +10,7 @@ import com.dogactnrvrdi.artbook.databinding.FragmentArtsBinding
 class ArtsFragment : Fragment(R.layout.fragment_arts) {
 
     // Binding
-    private var fragmentBinding : FragmentArtsBinding? = null
+    private var fragmentBinding: FragmentArtsBinding? = null
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

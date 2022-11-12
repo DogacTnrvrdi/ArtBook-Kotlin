@@ -2,7 +2,13 @@ package com.dogactnrvrdi.artbook.di
 
 import android.content.Context
 import androidx.room.Room
+import com.bumptech.glide.Glide
+import com.bumptech.glide.request.RequestOptions
+import com.dogactnrvrdi.artbook.R
 import com.dogactnrvrdi.artbook.api.RetrofitAPI
+import com.dogactnrvrdi.artbook.repo.ArtRepository
+import com.dogactnrvrdi.artbook.repo.IArtRepository
+import com.dogactnrvrdi.artbook.roomdb.ArtDAO
 import com.dogactnrvrdi.artbook.roomdb.ArtDatabase
 import com.dogactnrvrdi.artbook.util.Util.BASE_URL
 import dagger.Module
@@ -39,4 +45,17 @@ object AppModule {
             .build()
             .create()
     }
+
+    @Singleton
+    @Provides
+    fun injectNormalRepo(dao: ArtDAO, api: RetrofitAPI) =
+        ArtRepository(dao, api) as IArtRepository
+
+    @Singleton
+    @Provides
+    fun injectGlide(@ApplicationContext context: Context) =
+        Glide.with(context).setDefaultRequestOptions(
+                RequestOptions().placeholder(R.drawable.ic_launcher_foreground)
+                    .error(R.drawable.ic_launcher_foreground)
+            )
 }
