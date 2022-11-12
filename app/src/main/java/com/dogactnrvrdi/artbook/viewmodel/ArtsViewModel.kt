@@ -13,6 +13,8 @@ class ArtsViewModel @Inject constructor(
     private val repository: IArtRepository
 ) : ViewModel() {
 
+    val artList = repository.getArt()
+
     fun deleteArt(art: Art) = viewModelScope.launch {
         repository.deleteArt(art)
     }

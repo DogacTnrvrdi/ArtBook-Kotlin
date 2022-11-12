@@ -33,7 +33,7 @@ class ArtRecyclerAdapter @Inject constructor(
 
     private val recyclerListDiffer = AsyncListDiffer(this, diffUtil)
 
-    var artList: List<Art>
+    var arts: List<Art>
         get() = recyclerListDiffer.currentList
         set(value) = recyclerListDiffer.submitList(value)
 
@@ -50,7 +50,7 @@ class ArtRecyclerAdapter @Inject constructor(
         val artistNameText = holder.itemView.findViewById<TextView>(R.id.artRowArtistNameText)
         val yearText = holder.itemView.findViewById<TextView>(R.id.artRowYearTxt)
 
-        val arts = artList[position]
+        val arts = arts[position]
         holder.itemView.apply {
             artNameText.text = "Name: ${arts.artName}"
             artistNameText.text = "Artist Name: ${artistNameText}"
@@ -60,6 +60,6 @@ class ArtRecyclerAdapter @Inject constructor(
     }
 
     override fun getItemCount(): Int {
-        return artList.size
+        return arts.size
     }
 }
