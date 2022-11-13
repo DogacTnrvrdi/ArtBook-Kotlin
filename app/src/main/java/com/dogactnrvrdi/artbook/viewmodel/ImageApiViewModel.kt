@@ -22,6 +22,16 @@ class ImageApiViewModel @Inject constructor(
     val imageList: LiveData<Resource<ImageResponse>>
         get() = images
 
+    // Get Image Url
+    private val selectedImage = MutableLiveData<String>()
+    val selectedImageUrl: LiveData<String>
+        get() = selectedImage
+
+    // Selected Image Url
+    fun selectedImage(url: String) {
+        selectedImage.postValue(url)
+    }
+
     fun searchForImage(searchString: String) {
 
         if (searchString.isEmpty()) {

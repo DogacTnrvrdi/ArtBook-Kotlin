@@ -10,6 +10,7 @@
         android:layout_height="100dp"
         android:contentDescription="@string/shown_image"
         android:scaleType="centerCrop"
+        android:layout_margin="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_background" />

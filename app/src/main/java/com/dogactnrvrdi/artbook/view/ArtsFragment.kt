@@ -13,6 +13,8 @@ import com.dogactnrvrdi.artbook.R
 import com.dogactnrvrdi.artbook.adapter.ArtRecyclerAdapter
 import com.dogactnrvrdi.artbook.databinding.FragmentArtsBinding
 import com.dogactnrvrdi.artbook.viewmodel.ArtsViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import javax.inject.Inject
 
 class ArtsFragment @Inject constructor(
@@ -47,6 +49,7 @@ class ArtsFragment @Inject constructor(
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // View Model
         viewModel = ViewModelProvider(requireActivity()).get(ArtsViewModel::class.java)
 
         // Binding
@@ -68,6 +71,7 @@ class ArtsFragment @Inject constructor(
         }
     }
 
+    // Subscribe to Observers
     private fun subscribeToObservers() {
         viewModel.artList.observe(viewLifecycleOwner, Observer {
             artRecyclerAdapter.arts = it
